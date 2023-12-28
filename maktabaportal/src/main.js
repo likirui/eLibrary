@@ -8,13 +8,13 @@ import axiosInstance from './axiosInstance'
 import { useRouter } from 'vue-router'
 
 
-/*const app = createApp(App)
+const app = createApp(App)
 
 app.use(router)
 
-app.mount('#app')*/
+app.mount('#app')
 
-createApp(App)
+/*createApp(App)
  .use(router)
  .mount('#app')
 
@@ -27,4 +27,4 @@ axiosInstance.interceptors.response.use(
    }
    return Promise.reject(error);
  }
-);
+);*/
