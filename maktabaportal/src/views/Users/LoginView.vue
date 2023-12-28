@@ -48,7 +48,7 @@ export default {
 
    const LoginData = async () => {
      try {
-       const response = await axios.post("http://127.0.0.1:8000/api/login", {
+       const response = await axios.post("https://ebrary.000webhostapp.com/api/login", {
          email: student.value.email,
          password: student.value.password
        }, {
@@ -72,7 +72,7 @@ export default {
        router.push({ name: 'userdashboard' });
           }
        } else {
-         alert("Login password/username is wrong");
+         alert("Wrong password/username");
        }
      } catch (err) {
        alert("Error, please try again");

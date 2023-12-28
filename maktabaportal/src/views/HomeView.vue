@@ -112,7 +112,7 @@ export default {
    try {
      const token = localStorage.getItem('token');
      
-     const response1 = await axios.get(`http://127.0.0.1:8000/api/totalborrowedbooks`, {
+     const response1 = await axios.get(`https://ebrary.000webhostapp.com/api/totalborrowedbooks`, {
        headers: {
          'Authorization': `Bearer ${token}`
        }
@@ -121,7 +121,7 @@ export default {
      this.chartData.datasets[0].data = response1.data.counts;
     
 
-     const response2 = await axios.get(`http://127.0.0.1:8000/api/totalregisteredusers`, {
+     const response2 = await axios.get(`https://ebrary.000webhostapp.com/api/totalregisteredusers`, {
        headers: {
          'Authorization': `Bearer ${token}`
        }
@@ -130,7 +130,7 @@ export default {
      this.chartData2.datasets[0].data = response2.data.counts;
      console.log("Month: ", response2.data.months);
      
-     const response = await axios.get(`http://127.0.0.1:8000/api/gettotals`, {
+     const response = await axios.get(`https://ebrary.000webhostapp.com/api/gettotals`, {
        headers: {
          'Authorization': `Bearer ${token}`
        }
